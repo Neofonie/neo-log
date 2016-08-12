@@ -5,11 +5,11 @@
  *
  * DEBUG < INFO < DEV < WARN < ERROR < OFF
  *
- * @version 1.0.2
+ * @version 1.0.3
  *
  * @author Lennart Pegel <github@justlep.net>
  *
- * Example:
+ * Example (AMD):
  *    require(['Logger'], function(LOG) {
  *        LOG.debug('a debug message');
  *        LOG.info('an info message');       // is NOT output due to higher default log level WARN
@@ -20,6 +20,10 @@
  *        LOG.error('an error'); // mostly output in the console including a stacktrace
  *    });
  *
+ * Example (CommonJS):
+ *    var log = require('neolog/src/Logger');
+ *    log.debug('hello');
+ *
  * In live environment, the log level can be overridden by placing 'overrideloglevel={level-name>}'
  * anywhere in the browser URL. A (session) cookie will save it as the new default log level.
  * The cookie can be cleared by placing 'overrideloglevel=default' into the browser URL.
@@ -28,10 +32,13 @@
  */
 ;(function (factory) {
     'use strict';
-    if (typeof define === 'function' && define.amd) {
+    var useDefine = (typeof define === 'function' && define.amd),
+        useExports = !useDefine && (typeof module === 'object' && typeof (module||{}).exports === 'object');
+
+    if (useDefine) {
         define([], factory);
-    } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
-        exports.Logger = factory();
+    } else if (useExports) {
+        module.exports = factory();
     } else {
         window.Logger = factory();
     }
