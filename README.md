@@ -1,4 +1,4 @@
-# Logger
+# neolog
 A simple console logger
 
 * supports different log levels (DEBUG | INFO | DEV | WARN | ERROR | OFF)
