@@ -5,7 +5,7 @@
  *
  * DEBUG < INFO < DEV < WARN < ERROR < OFF
  *
- * @version 1.0.1
+ * @version 1.0.2
  *
  * @author Lennart Pegel <github@justlep.net>
  *
@@ -24,9 +24,17 @@
  * anywhere in the browser URL. A (session) cookie will save it as the new default log level.
  * The cookie can be cleared by placing 'overrideloglevel=default' into the browser URL.
  *
- * LOG.dev() should only be used during development and NOT be present in final code!
+ * LOG.dev() is intended for development phase and should not be present in final code.
  */
-define([], function() {
+;(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
+        exports.Logger = factory();
+    } else {
+        window.Logger = factory();
+    }
+})(function() {
 
     'use strict';
 
