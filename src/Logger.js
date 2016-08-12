@@ -27,6 +27,7 @@
  * LOG.dev() is intended for development phase and should not be present in final code.
  */
 ;(function (factory) {
+    'use strict';
     if (typeof define === 'function' && define.amd) {
         define([], factory);
     } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
