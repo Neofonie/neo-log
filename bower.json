@@ -1,0 +1,22 @@
+{
+  "name": "Logger",
+  "homepage": "https://github.com/justlep/Logger",
+  "authors": [
+    "Lennart Pegel <github@justlep.net>"
+  ],
+  "description": "A simple console logger",
+  "main": "src/Logger.js",
+  "keywords": [
+    "console",
+    "logger",
+    "logging"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
