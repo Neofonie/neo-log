@@ -8,3 +8,9 @@ A simple console logger
 
 ## Usage & examples 
 See [Logger.js](./src/Logger.js)
+
+## Installation via Bower
+```sh
+$ bower install --save neolog
+```
+
