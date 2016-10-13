@@ -1,4 +1,4 @@
-# neolog ![Bower](https://img.shields.io/bower/v/neolog.svg)
+# neolog ![Bower](https://badge.fury.io/bo/neolog.svg)
 A simple console logger
 
 * supports different log levels (DEBUG | INFO | DEV | WARN | ERROR | OFF)
