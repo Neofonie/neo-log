@@ -1,4 +1,4 @@
-# neolog [![Bower version](https://badge.fury.io/bo/neolog.svg)](https://badge.fury.io/bo/neolog)
+# neo-log 
 A simple console logger
 
 * supports different log levels (DEBUG | INFO | DEV | WARN | ERROR | OFF)
@@ -9,8 +9,7 @@ A simple console logger
 ## Usage & examples 
 See [Logger.js](./src/Logger.js)
 
-## Installation via Bower
+## Installation via npm
 ```sh
-$ bower install --save neolog
+$ npm install --save neo-log
 ```
-

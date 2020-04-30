@@ -5,7 +5,7 @@
  *
  * DEBUG < INFO < DEV < WARN < ERROR < OFF
  *
- * @version 1.0.3
+ * @version 1.1.0
  *
  * @author Lennart Pegel <github@justlep.net>
  *
@@ -21,7 +21,7 @@
  *    });
  *
  * Example (CommonJS):
- *    var log = require('neolog/src/Logger');
+ *    var log = require('neo-log/src/Logger');
  *    log.debug('hello');
  *
  * In live environment, the log level can be overridden by placing 'overrideloglevel={level-name>}'
@@ -43,7 +43,6 @@
         window.Logger = factory();
     }
 })(function() {
-
     'use strict';
 
     var isLocalhost = (location.hostname === 'localhost'),
@@ -111,7 +110,7 @@
             }
             if (logLevelFromCookie) {
                 Logger.LEVEL.INFO.fn('[Log level overridden by Cookie. ' +
-                                     'To reset add \'' + LOG_LEVEL_OVERRIDE_URL_PARAM + '=default\' to the URL]');
+                    'To reset add \'' + LOG_LEVEL_OVERRIDE_URL_PARAM + '=default\' to the URL]');
                 return logLevelFromCookie;
             }
             return DEFAULT_LOG_LEVEL_NAME;

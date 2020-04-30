@@ -1,0 +1,27 @@
+{
+  "name": "neo-log",
+  "version": "1.1.0",
+  "description": "a simple console logger",
+  "main": "src/Logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neofonie/neo-log.git"
+  },
+  "keywords": [
+    "javascript",
+    "console",
+    "logger",
+    "logging"
+  ],
+  "authors": [
+    "Lennart Pegel <github@justlep.net>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Neofonie/neo-log/issues"
+  },
+  "homepage": "https://github.com/Neofonie/neo-log#readme"
+}
